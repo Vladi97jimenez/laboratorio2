@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro Estudiantes</title>
+    <link rel="stylesheet" href="ztilos.css">
+</head> 
+<body>
+    <section class="contenedorTotal">
+    <h1 class="encabezado" >REGISTRAR ESTUDIANTE</h1>
+    <form name="frmAlumnos" id="frmAlumnos" method="get">
+        <div class="container">
+            <div class="fila">
+                <input type="text"  class="controles" id="txtCodigoAlumno" 
+                    required="required" placeholder="codigo" pattern="^[A-Z]{4}[0-9]{6}">
+            </div>
+            <div class="fila">
+                <input type="text" class="controles" id="txtNombreAlumno" required="required" 
+                    placeholder="Nombre" pattern="[a-zA-ZñÑ ]{3,65}">
+            </div>
+            <div class="fila">
+                <input type="text" class="controles" id="txtDireccionAlumno" required="required" placeholder="Direccion" >
+            </div>
+            <div class="fila">
+                <input type="text" class="controles" id="txtTelefonoAlumno" required="required" 
+                    placeholder="Telefono" pattern="[0-9]{4}-[0-9]{4}">
+            </div>
+            <div class="fila">
+                <input type="submit" class="controles" value="Guardar">
+                <input type="button"  class="controles" id="btnRecuperarAlumno" value="Recuperar">
+                <input type="button"  class="controles" id="btnLimpiar" value="Limpiar">
+            </div>
+        </div>
+    </form>
+    <script src="app.js"></script>
+</section>
+</body>
+</html>

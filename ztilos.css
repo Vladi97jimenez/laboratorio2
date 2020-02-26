@@ -1,0 +1,63 @@
+body{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    background: #64bcf0;
+}
+
+input{
+    height: 24px;
+    border: 1px solid rgb(129, 131, 134);
+    border-radius: 5px;
+}
+input[type=submit],
+input[type=button],
+input[type=file]{
+    background-color: rgb(142, 176, 238);
+    color: rgb(94, 7, 7);
+    text-transform: uppercase;
+    font-weight: bolder;
+    height: 32px;
+}
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=file]:hover{
+    color:  rgb(56, 99, 218);
+    background-color: #FFF;
+}
+input[type=text]:invalid,
+input[type=date]:invalid,
+input[type=file]:invalid,
+input[type=url]:invalid,
+input[type=tel]:invalid{
+    background-color: rgb(250, 156, 156);
+    color: black;
+}
+input[type=text]:valid, /* Estilo para los input de tipo text, date y file */
+input[type=date]:valid, /* Cuando es valido su contenido */
+input[type=file]:valid,
+input[type=url]:valid,
+input[type=tel]:valid{
+    background-color: rgb(134, 250, 173);
+    color: black;
+}
+.contenedorTotal{
+    padding: 30px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 100px;
+    background: #24303c;
+    width: 400px;
+}
+ .contenedorTotal .controles{
+    padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+}
+.encabezado{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
