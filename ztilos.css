@@ -14,7 +14,7 @@ input[type=submit],
 input[type=button],
 input[type=file]{
     background-color: rgb(142, 176, 238);
-    color: rgb(94, 7, 7);
+    color: rgb(209, 81, 81);
     text-transform: uppercase;
     font-weight: bolder;
     height: 32px;
