@@ -1,7 +1,7 @@
- <form method="post" id="frm-buscar-docentes">
+<form method="POST" id="frm-buscar-docentes">
     <div class="card text-white bg-dark mb-3" style="max-width: 48rem;">
-        <div class="card-header">
-            BUSQUEDA DE DOCENTES
+        <div class="car-header">
+            BUSQUEDA DOCENTES
 
             <button type="button" id="btn-close-buscar-docentes" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -12,7 +12,7 @@
                 <thead>
                     <tr>
                         <th colspan="5">
-                            <input type="text" id="txtBuscarDocente" placeholder=" Buscar por codigo, nombre o DUI" class="form-control">
+                            <input type="text" v-model="valor" v-on:keyup="buscarDocente" placeholder="codigo o nombre DUI" class="form-control">
                         </th>
                     </tr>
                     <tr>
@@ -20,14 +20,24 @@
                         <th>NOMBRE</th>
                         <th>DIRECCION</th>
                         <th>DUI</th>
-                        <th>TELEFONO</th> 
+                        <th>TELEFONO</th>
                         <th> </th>
                     </tr>
                 </thead>
                 <tbody>
-
+                    <tr v-for="profe in misdocentes" :key="profe.idDocente">
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.codigo }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.nombre }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.direccion }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.dui }}</td>
+                        <td  v-on:click="modificarDocente(profe)">{{ profe.telefono }}</td>
+                        <td>
+                            <input v-on:click="eliminarDocente(profe.idDocente)" type="button" class="btn btn-outline-danger text-white" value="del">
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </form>
+<script src="public/vistas/docentes/buscar-docentes.js"></script>
